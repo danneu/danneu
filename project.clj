@@ -9,4 +9,6 @@
   :plugins [[lein-ring "0.8.5"]]
   :ring {:handler danneu.handler/app}
   :profiles {:dev {:dependencies [[ring-mock "0.1.5"]]}}
-  :main danneu.handler)
+  :main danneu.handler
+  :aot [danneu.handler]
+  :uberjar-name "danneu-standalone.jar")
