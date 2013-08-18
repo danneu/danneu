@@ -130,3 +130,11 @@ While I've got the ball rolling (https://github.com/danneu/klobbdown), the gramm
 I basically want to have a Markdown parser that I can easily extend with some features I'd like for my static site generator. I have a few issues with the Java/Clojure solutions I've used.
 
 But I'll first have to evaluate whether it'll be easier to struggle with my Klobbdown project or contribute to an existing Clojure parser.
+
+- **Use a Sprockets-like asset pipeline**
+
+Especially since I plan on extracting this into a standalone tool, the app should minify and concatenate any CSS and JS files the user drops into some `assets/` folder.
+
+I got it implemented in a local branch using [dieter](https://github.com/edgecase/dieter), a "clojure interpretation of the ruby Sprockets library", but had some hangups getting it to work in production due to some issue with v8.
+
+I'll have to revisit this and consider other solutions.
